@@ -31,6 +31,7 @@ void pop(list& top,pointer pHapus){
     pHapus=top;
     top=pHapus->next;
     pHapus->next=NULL;
+    cout<<pHapus->isi<<",";
   }
 }
 void traversal(list top){
@@ -51,5 +52,8 @@ main(){
     createElmt(pb);
     push(q,pb);
   }
-  traversal(q);
+  for(int i=0;i<n;i++){
+    pop(q,ph);
+  }
+
 }
